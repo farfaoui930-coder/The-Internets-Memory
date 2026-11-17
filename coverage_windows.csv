@@ -1,0 +1,38 @@
+event,language,title,baseline_days,event_days,expected_event_days,baseline_complete,event_complete
+Earthquakes,ar,زلزال قهرمان مرعش 2023,0,0,7,FALSE,FALSE
+Earthquakes,en,2023 Turkey–Syria earthquakes,0,7,7,FALSE,TRUE
+Earthquakes,fr,Séismes de 2023 en Turquie et Syrie,0,7,7,FALSE,TRUE
+Earthquakes,es,Terremotos de Turquía y Siria de 2023,0,7,7,FALSE,TRUE
+Earthquakes,de,Erdbeben in der Türkei und Syrien 2023,0,5,7,FALSE,FALSE
+Earthquakes,it,Terremoto in Turchia e Siria del 2023,0,7,7,FALSE,TRUE
+Earthquakes,pt,Sismos da Turquia e Síria de 2023,0,7,7,FALSE,TRUE
+Earthquakes,tr,2023 Kahramanmaraş depremleri,0,0,7,FALSE,FALSE
+Earthquakes,ja,トルコ・シリア地震,0,0,7,FALSE,FALSE
+Earthquakes,zh,2023年土耳其-叙利亚地震,0,0,7,FALSE,FALSE
+Solar Eclipse,ar,كسوف الشمس 8 أبريل 2024,28,7,7,TRUE,TRUE
+Solar Eclipse,en,"Solar eclipse of April 8, 2024",28,7,7,TRUE,TRUE
+Solar Eclipse,fr,Éclipse solaire du 8 avril 2024,28,7,7,TRUE,TRUE
+Solar Eclipse,es,Eclipse solar del 8 de abril de 2024,28,7,7,TRUE,TRUE
+Solar Eclipse,de,Sonnenfinsternis vom 8. April 2024,28,7,7,TRUE,TRUE
+Solar Eclipse,it,Eclissi solare dell'8 aprile 2024,28,7,7,TRUE,TRUE
+Solar Eclipse,pt,Eclipse solar de 8 de abril de 2024,28,7,7,TRUE,TRUE
+Solar Eclipse,ja,2024年4月8日の日食,0,7,7,FALSE,TRUE
+Solar Eclipse,zh,2024年4月8日日食,28,7,7,TRUE,TRUE
+CrowdStrike,ar,حادثة كراود سترايك 2024,0,7,7,FALSE,TRUE
+CrowdStrike,en,2024 CrowdStrike-related IT outages,0,1,7,FALSE,FALSE
+CrowdStrike,es,Incidente de CrowdStrike de 2024,0,7,7,FALSE,TRUE
+CrowdStrike,it,Guasto informatico di CrowdStrike del 2024,0,4,7,FALSE,FALSE
+CrowdStrike,pt,Incidente da CrowdStrike em 2024,0,7,7,FALSE,TRUE
+CrowdStrike,zh,2024年CrowdStrike大规模蓝屏事件,0,3,7,FALSE,FALSE
+CrowdStrike,fr,Panne informatique mondiale de juillet 2024,0,7,7,FALSE,TRUE
+CrowdStrike,de,Crowdstrike-Computerausfall 2024,0,5,7,FALSE,FALSE
+FIFA Club World Cup,en,2025 FIFA Club World Cup,28,30,30,TRUE,TRUE
+FIFA Club World Cup,ar,كأس العالم للأندية 2025,28,30,30,TRUE,TRUE
+FIFA Club World Cup,tr,2025 FIFA Kulüpler Dünya Kupası,28,30,30,TRUE,TRUE
+FIFA Club World Cup,fr,Coupe du monde des clubs de la FIFA 2025,28,30,30,TRUE,TRUE
+FIFA Club World Cup,es,Copa Mundial de Clubes de la FIFA 2025,28,30,30,TRUE,TRUE
+FIFA Club World Cup,de,FIFA-Klub-Weltmeisterschaft 2025,28,30,30,TRUE,TRUE
+FIFA Club World Cup,it,Coppa del mondo per club FIFA 2025,28,30,30,TRUE,TRUE
+FIFA Club World Cup,pt,Mundial de Clubes FIFA de 2025,28,30,30,TRUE,TRUE
+FIFA Club World Cup,zh,2025年國際足協世界冠軍球會盃,28,30,30,TRUE,TRUE
+FIFA Club World Cup,ja,FIFAクラブワールドカップ,28,30,30,TRUE,TRUE
