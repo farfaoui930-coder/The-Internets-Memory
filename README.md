@@ -1,97 +1,116 @@
 
 # THE INTERNET'S MEMORY
 
-### Multilingual Analysis of Global Attention Through Wikipedia Pageviews (2023–2025)
+### Analyse multilingue de l'attention mondiale à travers les consultations de Wikipédia (2023–2025)
 
-**Author:** Fedi Arfaoui  
-**Institution:** ESSAI — École Supérieure de la Statistique et de l'Analyse de l'Information  
-**Academic Year:** 2026–2027
+**Auteur :** Fedi Arfaoui  
+**Établissement :** ESSAI — École Supérieure de la Statistique et de l'Analyse de l'Information  
+**Année universitaire :** 2026–2027
 
-## 1. Project Overview
+---
 
-This project explores how global events attract public attention across different Wikipedia language editions.
+## 1. Présentation du projet
 
-Using daily Wikipedia pageview data, the study investigates differences in information-seeking behavior and the evolution of attention over time.
+**The Internet's Memory** est un projet d'analyse exploratoire de données (EDA) qui étudie l'évolution de l'attention mondiale à travers les consultations quotidiennes de Wikipédia.
 
-**Research question:**
+L'objectif est de comprendre comment différents événements internationaux attirent l'attention des lecteurs et comment cette attention varie entre les éditions linguistiques.
 
-Do linguistic communities exhibit similar levels of interest in major global events, and how does this interest evolve over time?
+### Problématique
 
-## 2. Dataset
+Les communautés linguistiques manifestent-elles le même niveau d'intérêt pour les grands événements mondiaux, et comment cet intérêt évolue-t-il dans le temps ?
 
-Data sources:
+## 2. Données utilisées
+
+**Sources :**
 - Wikimedia Pageviews API
 - MediaWiki Action API
 
-Study period: 2023–2025.
+**Période étudiée :** 2023–2025
 
-The dataset contains:
-- 4 international events
-- 10 Wikipedia language editions
-- 37 validated articles
-- 33,800 daily pageview observations
-
-Languages: Arabic, English, French, Spanish, German, Italian, Portuguese, Turkish, Japanese and Chinese.
-
-## 3. Events Analyzed
-
-| Event | Date |
+| Indicateur | Valeur |
 |---|---|
-| Turkey–Syria earthquakes | February 6, 2023 |
-| Solar eclipse | April 8, 2024 |
-| CrowdStrike outage | July 19, 2024 |
-| FIFA Club World Cup | June–July 2025 |
+| Événements internationaux | 4 |
+| Éditions linguistiques | 10 |
+| Articles Wikipédia | 37 |
+| Observations quotidiennes | 33 800 |
+| Valeurs manquantes | 0 |
+| Observations dupliquées | 0 |
 
-## 4. Methodology
+### Langues étudiées
 
-The analysis follows these steps:
+Arabe (AR), anglais (EN), français (FR), espagnol (ES), allemand (DE), italien (IT), portugais (PT), turc (TR), japonais (JA) et chinois (ZH).
 
-1. Identification and validation of Wikipedia articles.
-2. Collection of daily pageviews.
-3. Data cleaning and validation.
-4. Exploratory data analysis using R.
-5. Comparison across language editions.
-6. Calculation of a relative Attention Index.
-7. Data visualization using ggplot2.
+## 3. Événements analysés
 
-### Attention Index
+| Événement | Date |
+|---|---|
+| Séismes Turquie–Syrie | 6 février 2023 |
+| Éclipse solaire | 8 avril 2024 |
+| Panne CrowdStrike | 19 juillet 2024 |
+| Coupe du monde des clubs FIFA | Juin–juillet 2025 |
 
-Attention Index =
+## 4. Méthodologie
 
-(Mean daily views during event / Mean daily views during baseline) × 100
+Le projet suit les étapes suivantes :
 
-The baseline covers 28 days before the event.
+1. Identification et validation des articles Wikipédia.
+2. Collecte des consultations quotidiennes.
+3. Nettoyage et contrôle de qualité des données.
+4. Analyse exploratoire avec R et tidyverse.
+5. Comparaison des éditions linguistiques.
+6. Calcul d'un indice d'attention.
+7. Création des visualisations avec ggplot2.
 
-An index above 100 indicates increased attention relative to the baseline.
+### Indice d'attention
 
-The index is calculated only when both observation windows are complete.
+L'indice d'attention compare les consultations moyennes pendant un événement aux consultations moyennes pendant une période de référence.
 
-## 5. Main Findings
+**IA = (Moyenne événement / Moyenne référence) × 100**
 
-- Attention patterns differ across events and Wikipedia language editions.
-- Sudden crises tend to generate sharp peaks in pageviews.
-- Extended sporting events produce fluctuations over longer periods.
-- All 18 articles with complete observation windows have an Attention Index above 100.
-- The highest observed Attention Index for the solar eclipse is 625 (Chinese Wikipedia).
-- The highest observed Attention Index for the FIFA Club World Cup is 299 (Spanish Wikipedia).
+La période de référence correspond aux 28 jours précédant l'événement.
 
-These results describe Wikipedia pageview activity, not the nationality or geographic location of readers.
+- IA = 100 : niveau de référence.
+- IA > 100 : augmentation de l'attention.
+- IA < 100 : diminution de l'attention.
 
-## 6. Visualizations
+L'indice est calculé uniquement lorsque les deux fenêtres temporelles sont complètes.
 
-### Pageviews by Event and Language
+## 5. Principaux résultats
 
-![Pageviews](figures/plot1_language_attention.png)
+L'analyse a mis en évidence plusieurs résultats :
 
-### Attention Index Across Languages
+- Les événements produisent des dynamiques d'attention différentes.
+- Les crises soudaines présentent généralement des pics de consultations concentrés.
+- Les compétitions sportives prolongées présentent des fluctuations sur plusieurs semaines.
+- 18 articles disposent de fenêtres complètes pour calculer l'indice d'attention.
+- Ces 18 articles présentent tous un indice supérieur à 100.
+
+### Résultats de l'indice d'attention
+
+| Événement | Langue | Indice |
+|---|---|---|
+| Éclipse solaire | Chinois (ZH) | 625 |
+| Éclipse solaire | Arabe (AR) | 175 |
+| Coupe du monde des clubs FIFA | Espagnol (ES) | 299 |
+| Coupe du monde des clubs FIFA | Arabe (AR) | 117 |
+
+Ces résultats décrivent les consultations des éditions linguistiques de Wikipédia et ne permettent pas d'identifier directement la nationalité des lecteurs.
+
+## 6. Visualisations
+
+### Figure 1 — Consultations par événement et langue
+
+![Pageviews by language](figures/plot1_language_attention.png)
+
+### Figure 2 — Indice d'attention
 
 ![Attention Index](figures/plot2_attention_index.png)
 
-### Evolution of Attention Over Time
+### Figure 3 — Évolution temporelle
 
 ![Temporal Evolution](figures/plot3_event_evolution.png)
 
-## 7. Repository Structure
+## 7. Structure du projet
 
 ```text
 The-Internets-Memory/
@@ -99,6 +118,7 @@ The-Internets-Memory/
 |-- 01_validation_articles.R
 |-- 02_collect_pageviews.R
 |-- exploratory_analysis.R_03.R
+|-- The-Internet-Memory.Rproj
 |
 |-- articles_all.csv
 |-- pageviews_all.csv
@@ -112,53 +132,91 @@ The-Internets-Memory/
 |   |-- plot2_attention_index.png
 |   |-- plot3_event_evolution.png
 |
-|-- The_Internets_Memory_Poster_A0.pdf
+|-- The_Internet_s_Memory___A0_Poster (6).pdf
 |-- README.md
 ```
 
-## 8. Tools and Technologies
+## 8. Outils et technologies
 
 - R
 - tidyverse
 - ggplot2
 - Wikimedia APIs
 - LaTeX / Overleaf
+- RStudio
 - GitHub
 
-## 9. Reproducibility
+## 9. Reproductibilité
 
-The R scripts are organized into three stages:
+### Ouvrir le projet
 
-1. `01_validation_articles.R` — Article validation.
-2. `02_collect_pageviews.R` — Pageview collection.
-3. `exploratory_analysis.R_03.R` — Exploratory analysis and visualization.
+1. Télécharger le dépôt GitHub.
+2. Ouvrir `The-Internet-Memory.Rproj` dans RStudio.
+3. Installer les packages R nécessaires, si besoin.
+4. Exécuter les scripts depuis le dossier du projet.
 
-Run the scripts in this order from the project directory, with the required R packages installed.
+### Scripts
 
-The repository also contains the collected CSV files, allowing the analysis to be examined without repeating all API requests.
+**Script 01 :**
+`01_validation_articles.R`
 
-API availability and rate limits may affect a fresh data collection.
+Validation des articles Wikipédia.
 
-## 10. Limitations
+**Script 02 :**
+`02_collect_pageviews.R`
 
-- Wikipedia language editions do not directly identify readers' nationalities.
-- Raw pageview totals are influenced by audience size.
-- Some articles have incomplete observation windows.
-- The Attention Index is available only for articles with complete baseline and event windows.
+Collecte des données à partir des API Wikimedia.
 
-## 11. AI Usage Declaration
+**Script 03 :**
+`exploratory_analysis.R_03.R`
 
-**Estimated AI usage: 65%.**
+Analyse exploratoire, calcul des indicateurs et création des graphiques.
 
-ChatGPT was used to assist with R programming, debugging, exploratory analysis and LaTeX poster preparation.
+### Reproduire les visualisations
 
-The study uses data collected from Wikimedia APIs.
+Les fichiers CSV collectés sont déjà inclus dans le dépôt.
 
-## 12. Scientific Poster
+Dans la Console RStudio :
 
-The scientific poster is provided as a one-page A0 PDF in this repository.
+```r
+source("exploratory_analysis.R_03.R")
+```
+
+Le script produit les trois visualisations dans le dossier `figures/` et exporte les tableaux d'analyse.
+
+Une nouvelle collecte via les API peut être affectée par les limitations de requêtes et la disponibilité des services Wikimedia.
+
+## 10. Limites de l'étude
+
+- La langue d'une édition Wikipédia ne représente pas nécessairement la nationalité des lecteurs.
+- Les volumes bruts ne sont pas directement comparables entre audiences linguistiques.
+- Certains articles présentent des fenêtres temporelles incomplètes.
+- L'indice d'attention est calculé uniquement pour les articles disposant des données nécessaires.
+
+## 11. Utilisation de l'intelligence artificielle
+
+**Taux estimé d'utilisation de l'IA : 65 %.**
+
+ChatGPT a été utilisé comme outil d'assistance pour :
+
+- La programmation R.
+- Le débogage.
+- L'analyse exploratoire des données.
+- La préparation du poster scientifique en LaTeX.
+
+Les données proviennent des API Wikimedia.
+
+## 12. Poster scientifique A0
+
+Le poster scientifique a été réalisé avec LaTeX et présenté au format A0, sur une seule page.
+
+### [Consulter le poster scientifique A0 (PDF)](The_Internet_s_Memory___A0_Poster%20%286%29.pdf)
+
+Le poster présente la problématique, la méthodologie, les trois visualisations, les résultats, les limites et les conclusions de l'étude.
 
 ---
 
-**Author:** Fedi Arfaoui  
-**ESSAI — Academic Year 2026–2027**
+**Fedi Arfaoui**  
+**ESSAI — École Supérieure de la Statistique et de l'Analyse de l'Information**  
+**Année universitaire 2026–2027**
+
