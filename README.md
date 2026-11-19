@@ -219,4 +219,3 @@ Le poster présente la problématique, la méthodologie, les trois visualisation
 **Fedi Arfaoui**  
 **ESSAI — École Supérieure de la Statistique et de l'Analyse de l'Information**  
 **Année universitaire 2026–2027**
-
